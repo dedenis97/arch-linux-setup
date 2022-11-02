@@ -7,7 +7,7 @@ ______________________________________________________
 ______________________________________________________
 
 "
-sudo pacman -Sy code docker docker-compose krita neovim zsh git
+sudo pacman -Sy code docker docker-compose krita neovim zsh git plank
 yay -Sy google-chrome
 
 
