@@ -1,0 +1,47 @@
+#!/bin/bash
+
+echo -ne "
+______________________________________________________
+
+            Installing base packages
+______________________________________________________
+
+"
+sudo pacman -Sy code docker docker-compose krita neovim zsh git
+yay -Sy google-chrome
+
+
+echo -ne "
+______________________________________________________
+
+            Installing vmtools
+______________________________________________________
+
+"
+
+# sudo pacman -S gtkmm
+# sudo pacman -S open-vm-tools
+# sudo pacman -S xf86-video-vmware xf86-input-vmmouse
+
+
+systemctl enable vmtoolsd
+
+echo -ne "
+______________________________________________________
+
+            Installing oh my zsh
+______________________________________________________
+
+"
+
+
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+
+
+echo -ne "
+______________________________________________________
+
+    TODO: open /.zshrc file ZSH_THEME=
+______________________________________________________
+
+"
